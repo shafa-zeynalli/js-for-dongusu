@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulcekme(miqdar) {
+            var arr = [ 500, 10, 5, 1,20, 200,  50, 100,]; // pul eskinazlari
+            var pulEskinazlari = arr.sort((a,b) => b-a)
+            // var arr = [ 500, 200,  100, 50, 20, 10, 5, 1, ]; // pul eskinazlari
+            
+            console.log(pulEskinazlari)
+            var netice = {}; // cekilen pulu tutmaq üçün bir obyekt
+
+            for (var i = 0; i < pulEskinazlari.length; i++) {
+                var vahid = pulEskinazlari[i];  // 500  
+                var eded = Math.floor(miqdar / vahid); //973 / 500 
+
+                if (eded > 0) {
+                    netice[vahid] = eded; 
+                    miqdar -= eded * vahid; 
+                }
+            }
+            console.log(netice)
+            return netice;
+        }
+
+        var miqdar = 973;
+        var netice = paraCekme(miqdar);
+
+        console.log("Çekilen Paralar:", netice);
+
+        for (var vahid in netice) {
+            if (netice.hasOwnProperty(vahid)) {
+                console.log(vahid + " Manat: " + netice[vahid] + " adet");
+            }
+        }
+    </script>
+</body>
+</html>

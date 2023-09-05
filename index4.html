@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      pre {
+        margin: 20px;
+        font-size: 30px;
+        color: rgb(36, 162, 162);
+        border-right: 2px solid rgb(126, 3, 148);
+        padding-right: 10px;
+      }
+      span{
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <pre id="p1"></pre>
+      <pre id="p2"></pre>
+      <pre id="p3"></pre>
+      <pre id="p4"></pre>
+      <pre id="p5"></pre>
+      <pre id="p6"></pre>
+      <pre id="p7"></pre>
+      <pre id="p8"></pre>
+      <pre id="p9"></pre>
+      <pre id="p10"></pre>
+      <pre id="p11"></pre>
+      <pre id="p12"></pre>
+      <!-- <pre id="p13"></pre> -->
+    </div>
+    <script>
+      const p1 = document.getElementById("p1");
+      const p2 = document.getElementById("p2");
+      const p3 = document.getElementById("p3");
+      const p4 = document.getElementById("p4");
+      const p5 = document.getElementById("p5");
+      const p6 = document.getElementById("p6");
+      const p7 = document.getElementById("p7");
+      const p8 = document.getElementById("p8");
+      const p9 = document.getElementById("p9");
+      const p10 = document.getElementById("p10");
+      const p11 = document.getElementById("p11");
+      const p12 = document.getElementById("p12");
+      // const p13 = document.getElementById("p13");
+
+      //////////////////////////////////  Task 1 /////////////////////////
+
+      let x = "";
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          x += "*";
+        }
+        x += "<br>";
+      }
+      p1.innerHTML += x;
+
+      //////////////////////////////////  Task 2 /////////////////////////
+
+      let y = "";
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          if (i === 0 || i === 5 - 1 || j === 0 || j === 5 - 1) {
+            y += "*";
+          } else {
+            y += " ";
+          }
+        }
+        y += "<br/>";
+      }
+      p2.innerHTML = y;
+
+      //////////////////////////////////  Task 3 /////////////////////////
+
+      var l = "";
+      for (var i = 1; i <= 5; i++) {
+        for (var k = 1; k <= i; k++) {
+          l += "*";
+        }
+        l += "<br>";
+        p3.innerHTML = l;
+      }
+
+      //////////////////////////////////  Task 4 /////////////////////////
+
+      var z = "";
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5 - i; j++) {
+          z += " ";
+        }
+
+        for (var k = 1; k <= i; k++) {
+          z += "*";
+        }
+        z += "<br>";
+        p4.innerHTML = z;
+      }
+
+      //////////////////////////////////  Task 5 /////////////////////////
+
+      let n = "";
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5; j++) {
+          if (j === i || j === 1 || j === 5) {
+            n += "*";
+          } else {
+            n += " ";
+          }
+        }
+        n += "<br>";
+        p5.innerHTML = n;
+      }
+
+      //////////////////////////////////  Task 6 /////////////////////////
+
+      let t = "";
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= i; j++) {
+          if (j === i || j === 1 || i === 5) {
+            t += "*";
+          } else {
+            t += " ";
+          }
+        }
+        t += "<br>";
+        p6.innerHTML = t;
+      }
+
+      //////////////////////////////////  Task 7 /////////////////////////
+
+      let b = "";
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5 - i; j++) {
+          b += " ";
+        }
+        for (var k = 1; k <= 2 * i - 1; k++) {
+          b += "*";
+        }
+        b += "<br>";
+        p7.innerHTML = b;
+      }
+
+      //////////////////////////////////  Task 8 /////////////////////////
+
+      let c = "";
+      for (var i = 5; i > 0; i--) {
+        for (var j = 1; j <= 5 - i; j++) {
+          c += " ";
+        }
+        for (var k = 2 * i - 1; k > 0; k--) {
+          c += "*";
+        }
+        c += "<br>";
+        p8.innerHTML = c;
+      }
+
+      //////////////////////////////////  Task 9 /////////////////////////
+
+      let d = "";
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5 - i; j++) {
+          d += " ";
+        }
+        if (i === 1 || i === 5) {
+          for (var k = 1; k <= 2 * i - 1; k++) {
+            d += "*";
+          }
+        } else {
+          d += "*";
+          for (var l = 1; l <= 2 * (i - 1) - 1; l++) {
+            d += " ";
+          }
+          d += "*";
+        }
+        d += "<br>";
+        p9.innerHTML = d;
+      }
+
+      //////////////////////////////////  Task 10 /////////////////////////
+
+      let e = "";
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5 - i; j++) {
+          e += " ";
+        }
+        for (var k = 1; k <= 2 * i - 1; k++) {
+          e += "*";
+        }
+        e += "<br>";
+        p10.innerHTML = e;
+      }
+
+      for (var i = 4; i > 0; i--) {
+        for (var j = 0; j <= 4 - i; j++) {
+          e += " ";
+        }
+        for (var k = 2 * i - 1; k > 0; k--) {
+          e += "*";
+        }
+        e += "<br>";
+        p10.innerHTML = e;
+      }
+
+      //////////////////////////////////  Task 11 /////////////////////////
+
+      var p = ''; 
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5 - i; j++) {
+          p += " ";
+        }
+        p += "*";
+
+        if (i > 1) {
+          for (var k = 1; k <= 2 * (i - 1) - 1; k++) {
+            p += " ";
+          }
+          p += "*";
+        }
+        p += "<br>";
+        p11.innerHTML = p;
+      }
+
+      for (var i = 5 - 1; i >= 1; i--) {
+        
+ 
+        for (var j = 1; j <= 5 - i; j++) {
+          p += " ";
+        }
+
+        p += "*";
+
+        if (i > 1) {
+          for (var k = 1; k <= 2 * (i - 1) - 1; k++) {
+            p += " ";
+          }
+          p += "*";
+        }
+        p += "<br>";
+        p11.innerHTML = p;
+      }
+
+
+
+
+      //////////////////////////////////  Task 12 /////////////////////////
+
+
+
+      let r = ""; 
+      for (var i = 5; i > 0; i--) {
+        for (var j = 0; j <= 4 - i; j++) {
+          r += " ";
+        }
+        for (var k = 2 * i - 1; k > 0; k--) {
+          r += "*";
+        }
+        r += "<br>";
+        p12.innerHTML = r;
+      }
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5 - i; j++) {
+          r += " ";
+        }
+        for (var k = 1; k <= 2 * i - 1; k++) {
+          r += "*";
+        }
+        r += "<br>";
+        p12.innerHTML = r;
+      }
+    </script>
+  </body>
+</html>

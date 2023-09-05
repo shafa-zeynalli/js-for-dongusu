@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      //////////////////////////////   Task 1 ////////////////////////////////
+
+      console.log(" ///////Task 1///////");
+      console.log(
+        "Verilmish massivin daxilindeki tek veya menfi ededlerin cemi: [1, 3, -1, 5, 7, 8, 12, -6, 3, 9] | output: 21"
+      );
+      var arr = [1, 3, -1, 5, 7, 8, 12, -6, 3, 9];
+      var arr1 = [];
+      var x = 0;
+      arr.map((a) => {
+        if (a % 2 === 1 || a < 0) {
+          x += a;
+        }
+      });
+      console.log("task 1:  x-in deyeri : \n", x);
+
+      //////////////////////////////   Task 2 ////////////////////////////////
+      console.log("\n \n///////Task2//////");
+      console.log(
+        "Verilmish massivin daxilindeki tek veya menfi ededleri silin: [1, 3, -1, 5, 7, 8, 12, -6, 3, 9] | output: [8, 12]"
+      );
+
+      arr.map((a) => {
+        if (a % 2 === 0 && a > 0) {
+          arr1.push(a);
+        }
+      });
+      console.log("task 2: arr1-in deyeri: \n", arr1);
+
+      //////////////////////////////   Task 3 ////////////////////////////////
+      console.log("\n \n///////Task3//////");
+      console.log(
+        "Verilmish massivin daxilideki her hansi 2 ededin ceminin 17 ye beraber olan ededlerin index ni tapin: [1, 3, -1, 5, 7, 8, 12, -6, 3, 9] | output: [5, 9]"
+      );
+
+      function findIndexesWithSum(arr, targetSum) {
+        const indexes = []; 
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === targetSum) {
+              indexes.push(i, j);
+            }
+          }
+        } 
+        return indexes;
+      } 
+      const targetSum = 17; 
+      console.log(findIndexesWithSum(arr, targetSum)); // [5, 9]
+
+
+      //////////////////////////////   Task 4 ////////////////////////////////
+      console.log("\n \n///////Task4//////");
+      console.log(
+        "Verilmish massivin daxilindeki en boyuk ve en kicik ededleri tapin: [1, 3, -1, 5, 7, 8, 12, -6, 3, 9] | output: en kichik: -6, en boyuk: 12"
+      );
+      function compared(array){
+        array.sort((a,b)=>a-b)
+        let min = array[0]
+        let max = array[array.length-1]
+        console.log('Min: ', min, '  Max: ', max)
+      }
+      compared(arr)
+      
+    </script>
+  </body>
+</html>

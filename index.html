@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="hesabla(true)" id="add">+</button>
+    <span id="span">0</span>
+    <button onclick="hesabla(false)">-</button>
+    <script>
+
+        const span = document.getElementById('span')
+        
+        let x = 0 
+
+        function hesabla(hesab){
+            span.innerHTML = hesab ? ++x : --x
+        }
+
+        // function hesabla(){
+        //     add.addEventListener('click', () => span.innerHTML =  ++x )
+        //     azal.addEventListener('click', () =>  span.innerHTML =  --x )
+        // }
+        // hesabla()
+    </script>
+</body>
+</html>
