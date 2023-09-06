@@ -1,225 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style>
-        div{
-            width: 400px;
-            background-color: blueviolet;
-            color: white;
-            height: 400px;
-        }
-        p{
-            margin: 20px;
-            background-color: aqua;
-
-        }
-    </style> -->
 </head>
-
 <body>
-    <!-- <ul id="app">
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>HTML</li>
-    </ul> -->
-    <p></p>
     <script>
-        // let arr = [10, 5, 2, 7]
-
-        // function sum(param){
-        //     let x = 0;
-        //     for(let i=0; i< param.length; i++){
-        //         x += param[i]
-        //         console.log(param[i])
-        //         console.log(x);
-        //     }
-
-        //    console.log(x);
-        // }
-        // sum(arr);
-
-        // let app = document.querySelector('#app');
-
-        // let langs = ['SASS', 'React', 'Next'];
-
-        // let nodes = langs.map(lang => {
-        //     let li = document.createElement('li');
-        //     li.textContent = lang;
-        //     return li;
-        // });
-
-        // app.append(...nodes);
-
-        // console.log(arr.reduce((sum, a) => sum + a, 0))
-
-        // let i=79;
-
-        // for( i>= 53; i--;){
-        //         console.log(i)
-        // }
-        // for(i<=100; i++;){
-        //     console.log(i)
-        // }
-
-        // function printNumbers(min, max){
-        //     for(let i=min; i<=max; i++){
-        //         console.log(i)
-        //     }
-        // }
-        // printNumbers(9, 18)
-
-        // function findIndex(sentence, word){
-
-        //     console.log(sentence.indexOf('e',14))
-        // }
-
-        // findIndex('men bir frontend developerem', 'frontend')
-
-        // let human  = ['Aytac',"Shafa", 'Simara' ]
-
-        // function add(arr){
-        //     var i;
-        //     var parentDiv = document.getElementById('div')
-
-        //     arr.map((a, index)=>{
-        //      i= document.createElement('p');
-        //      i.innerHTML = a
-        //      parentDiv.append(i)
-        //     //  document.write(parentDiv.innerHTML)
-        //     //  console.log(i)
-        //      })
-
-        //     // document.write(i)
-
-        // }
-        // add(human)
-
-        // let obj = {firstName: 'Shafa', lastName: 'Zeynal'}
-        // let arr = [1, 2, 7, 4, 8]
-        // let i=0;
-        // for(i; i<obj.length; i++){
-        //     console.log(obj[i])
-        // }
-        // for(let key in obj){
-        //     console.log(key + ': ' + obj[key] )
-        // }
-
-        // for(let index of arr){
-        //     console.log(index + ': ' + arr[index] )
-        // }
-
-        // while(i<arr.length){
-        //     console.log(arr[i])
-        //     i++
-        // }
-
-        // do{
-        //     console.log(arr[i], )
-        //     i++
-        // }while(i<arr.length)
-
-        // arr.forEach((el, index) => console.log(index + ': ' + el))
-
-        // const keys = Object.keys(obj);
-        // console.log(keys)
-        // keys.forEach((el, index) => console.log(el + ': ' + obj[el]))
-
-        // if(i<arr.length){
-        //     console.log('salam')
-        // }else if(i>arr.length){console.log('bye')}
-        // else(console.log('jhbfjksbdfjbfd'))
-
-        // for(let i=1 ; i< 100; i++){
-        //     if(i%5 == 0 && i%2==1 || i%2==0 && i%6 == 0){
-        //         console.log('tek: ', i)
-        //     }
-
-        // }
-
-        // function factorial(n){
-        //     if(n==0 || n==1){
-        //         return 1
-        //     }else{
-        //         return n * factorial(n-1)
-        //     }
-        // }
-        // console.log(factorial(5))
-
-        // let arr1 = [1,2.3,4,5,6,7,8,9,10]
-        // let arr2 = []
-
-        // arr1.map((arr => arr2.push(arr)))
-        // console.log(arr2)
-
-        // let arr = [12344321, 345543, 567765]
-
-        // let num = 123321
-        // let arr = []
-        // let g=0
-        // while(num >=1){
-        //     g = num % 10 ;
-        //     console.log(parseInt(g))
-        //     arr.push(parseInt(g))
-        //     num /= 10
-        // }
-        // console.log(arr)
+        var arr = [5,2,1,7,0,9,4]
+        var arr1=arr.sort((a,b)=> b-a)
+        console.log('//////////////Task 1 /////////////')
+        console.log('Verilmish massivin 2 ci en boyuk elementini tapin. [5,2,1,7,0,9,4]')
+        console.log('arr in 2ci en boyuk elementi: ',arr1[1] )
+        console.log('\n//////////////Task 2 /////////////')
+        console.log('Verilmish massivin 2 ci en kichik elementini tapin. [5,2,1,7,0,9,4]')
+        console.log('arr in 2ci en kicik elementi: ',arr1[arr.length-2] )
+        console.log('\n//////////////Task 3 /////////////')
+        console.log('Verilmish massivi azalan ardicillighla yazin. [5,2,1,7,0,9,4]')
+        console.log('arrin azalan massivi: ', arr1)
+        console.log('\n//////////////Task 4 /////////////')
+        console.log('Verilmish massivi artan ardicillighla yazin. [5,2,1,7,0,9,4]')
+        var arr2=arr.sort((a,b)=> a-b) 
+        console.log('arrin artan massivi: ', arr2)
 
 
-        //   for (let i = 1; i < 5*2 -1; i++) {
-        //     let x = "";
+        function factorial(num){
+            if(num==1 || num==0){
+                return 1
+            }
+            return num*factorial(num-1)
+        }
+        console.log(factorial(5))
 
-        //     for (let j = 1; j <= i; j++) {
-
-        //       // console.log(x)
-        //     }
-        //     for (let j = 1; j <= i; j++) {
-        //       x += "x";
-        //       // console.log(x)
-        //     }
-
-        //     console.log(x);
-        //   }
-
-        //   for (let i = 4; i > 0; i--) {
-        //     let x = "";
-
-        //     for (let j = 1; j <= i; j++) {
-        //       x += "x";
-        //       // console.log(x)
-        //     }
-
-        //     console.log(x);
-        //   }
-
-        //   var yukseklik = 4;
-
-        //   for (var i = 1; i <= yukseklik * 2 - 1; i++) {
-        //     // i<= 7
-        //     var satir = "";
-
-        //     //   for (var j = 1; j <= Math.abs(yukseklik - i); j++) {
-        //     //     satir += " ";
-        //     //   }
-
-        //     for (var k = 1; k <= yukseklik - Math.abs(yukseklik - i); k++) {
-        //       satir += "x";
-
-        //     }
-
-        //     console.log(satir);
-        //   }
-
-
-
-
-
-        
-
-        </script>
-    </body>
+    </script>
+</body>
 </html>

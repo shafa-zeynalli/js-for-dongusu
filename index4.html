@@ -15,6 +15,7 @@
         color: rgb(36, 162, 162);
         border-right: 2px solid rgb(126, 3, 148);
         padding-right: 10px;
+        background-color: rgb(193, 201, 201);
       }
       span{
         color: blueviolet;
@@ -35,7 +36,7 @@
       <pre id="p10"></pre>
       <pre id="p11"></pre>
       <pre id="p12"></pre>
-      <!-- <pre id="p13"></pre> -->
+      <pre id="p13"></pre>
     </div>
     <script>
       const p1 = document.getElementById("p1");
@@ -50,7 +51,7 @@
       const p10 = document.getElementById("p10");
       const p11 = document.getElementById("p11");
       const p12 = document.getElementById("p12");
-      // const p13 = document.getElementById("p13");
+      const p13 = document.getElementById("p13");
 
       //////////////////////////////////  Task 1 /////////////////////////
 
@@ -169,6 +170,7 @@
         for (var j = 1; j <= 5 - i; j++) {
           d += " ";
         }
+        
         if (i === 1 || i === 5) {
           for (var k = 1; k <= 2 * i - 1; k++) {
             d += "*";
@@ -228,6 +230,7 @@
         p11.innerHTML = p;
       }
 
+
       for (var i = 5 - 1; i >= 1; i--) {
         
  
@@ -275,6 +278,30 @@
         r += "<br>";
         p12.innerHTML = r;
       }
+
+      //////////////////////////////////  Task 12 /////////////////////////
+
+      let s = '';
+      for(let i=0; i<=5; i++){
+        for(let j=0; j<5-i; j++){
+          s+=' '  
+          
+        }
+        for(let k=0; k<2*i+1 ; k++){
+          
+          if(k==i){
+            s+='|'
+          }
+          else if(i>0){
+            s+='*'
+          }
+          
+        }
+        s += "<br>";
+        p13.innerHTML = s;
+      }
+
+
     </script>
   </body>
 </html>
