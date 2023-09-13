@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        var arr = [5,2,1,7,0,9,4]
-        var arr1=arr.sort((a,b)=> b-a)
-        console.log('//////////////Task 1 /////////////')
-        console.log('Verilmish massivin 2 ci en boyuk elementini tapin. [5,2,1,7,0,9,4]')
-        console.log('arr in 2ci en boyuk elementi: ',arr1[1] )
-        console.log('\n//////////////Task 2 /////////////')
-        console.log('Verilmish massivin 2 ci en kichik elementini tapin. [5,2,1,7,0,9,4]')
-        console.log('arr in 2ci en kicik elementi: ',arr1[arr.length-2] )
-        console.log('\n//////////////Task 3 /////////////')
-        console.log('Verilmish massivi azalan ardicillighla yazin. [5,2,1,7,0,9,4]')
-        console.log('arrin azalan massivi: ', arr1)
-        console.log('\n//////////////Task 4 /////////////')
-        console.log('Verilmish massivi artan ardicillighla yazin. [5,2,1,7,0,9,4]')
-        var arr2=arr.sort((a,b)=> a-b) 
-        console.log('arrin artan massivi: ', arr2)
+      var arr = [5, 2, 1, 7, 0, 9, 4];
+      var arr1 = arr.sort((a, b) => b - a);
+      console.log("//////////////Task 1 /////////////");
+      console.log(
+        "Verilmish massivin 2 ci en boyuk elementini tapin. [5,2,1,7,0,9,4]"
+      );
+      console.log("arr in 2ci en boyuk elementi: ", arr1[1]);
+      console.log("\n//////////////Task 2 /////////////");
+      console.log(
+        "Verilmish massivin 2 ci en kichik elementini tapin. [5,2,1,7,0,9,4]"
+      );
+      console.log("arr in 2ci en kicik elementi: ", arr1[arr.length - 2]);
+      console.log("\n//////////////Task 3 /////////////");
+      console.log(
+        "Verilmish massivi azalan ardicillighla yazin. [5,2,1,7,0,9,4]"
+      );
+      console.log("arrin azalan massivi: ", arr1);
+      console.log("\n//////////////Task 4 /////////////");
+      console.log(
+        "Verilmish massivi artan ardicillighla yazin. [5,2,1,7,0,9,4]"
+      );
+      var arr2 = arr.sort((a, b) => a - b);
+      console.log("arrin artan massivi: ", arr2);
 
+      // function factorial(num1, num2){
+      //     if(num2 >= num1){
+      //      return num1 + factorial(++num1, num2)
+      //     }else {
+      //         return 0
+      //     }
+      // }
+      // console.log(factorial(2,8)) // 2+3+4+5+6+7+8
 
-        function factorial(num){
-            if(num==1 || num==0){
-                return 1
-            }
-            return num*factorial(num-1)
+      // function name(n){
+      //     console.log(n.split('').reverse('').join(''))
+      // }
+      // name('hello')
+
+      const items = [
+        { name: "Edward", value: 21 },
+        { name: "sharpe", value: 37 },
+        { name: "And", value: 45 },
+        { name: "the", value: -12 },
+        { name: "Magnetic", value: 13 },
+        { name: "Zeros", value: 37 },
+      ];
+      items.sort((a, b) => {
+        const nameA = a.name.toLowerCase();
+        const nameB = b.name.toLowerCase();
+
+        if (nameA < nameB) {
+          return -1;
+        } else if (nameA > nameB) {
+          return 1;
+        } else {
+          return 0;
         }
-        console.log(factorial(5))
+      });
 
+      console.log(items);
     </script>
-</body>
+  </body>
 </html>
