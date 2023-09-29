@@ -1,46 +1,52 @@
-// class User{
-//     constructor (name , password){
-//         this.name =name
-//         this.password = password
-//     }
-//     getName(){
-//         return this.name
-//     }
-//     getPassword(){
-//         return this.password
-//     }
-//     login(){
-//         if(this.name==='Rasad' && this.password==='123'){
-//             return true
-//         }else{return false}
+class User{
+    constructor (name , password){
+        this.name =name
+        this.password = password
+    }
+    getName(){
+        return this.name
+    }
+    getPassword(){
+        return this.password
+    }
+    login(){
+        if(this.name==='Rasad' && this.password==='123'){
+            return true
+        }else{return false}
 
-//     }
-// }
+    }
+}
 
-// let user = new User("Rasad","123");
+let user = new User("Rasad","123");
 
-// console.log(user)
-// console.log(user.getName())
-// console.log(user.getPassword())
-// console.log(user.login())
+console.log(user)
+console.log(user.getName())
+console.log(user.getPassword())
+console.log(user.login())
 
-// const countries = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']];
-// const rectangle = { Width: 20, Height: 10, Area: 200 };
-// const arr = [1, 5, 3, 7,2, 45, 23]
-// countries dizisini forEach ile ayrıştırma
-// countries.forEach(([country, capital]) => {
-//   console.log(`Ülke: ${country}, Başkent: ${capital}`);
-// });
+const countries = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']];
+const rectangle = { Width: 20, Height: 10, Area: 200 };
+const arr = [1, 5, 3, 7,2, 45, 23]
+ 
+countries.forEach(([country, capital]) => {
+  console.log(`Ülke: ${country}, Başkent: ${capital}`);
+});
 
-// // rectangle nesnesini forEach ile ayrıştırma
-// Object.entries(rectangle).forEach(([key, value]) => {
-//   console.log(`${key}: ${value}`);
-// });
+ 
+Object.entries(rectangle).forEach(([key, value]) => {
+  console.log(`${key}: ${value}`);
+});
 
-// arr.sort((a,b)=> a-b)
-// console.log(arr)
+arr.sort((a,b)=> a-b)
+console.log(arr)
 
-// const array = [1, 2, 2, 3, 4, 6, 4, 8]
+const array = [1, 2, 2, 3, 4, 6, 4, 8]
+
+
+
+
+
+
 
 // function findDublicate(arr){
 //     const mySet = new Set();
@@ -98,30 +104,30 @@ function findDublicate(sentence, word) {
 
 
 
-///////// Taskin basqa usulu ////////////////////
+/////// Taskin basqa usulu ////////////////////
 
 
 
 
-    // const obj = {};
-    // var y = [];
-    // word1.forEach(element => { 
-    //     obj[element] =  (obj[element] || 0) + 1;
+    const obj = {};
+    var y = [];
+    word1.forEach(element => { 
+        obj[element] =  (obj[element] || 0) + 1;
         
-    // });
+    });
 
-    // Object.keys(obj).forEach(key =>{  
-    //    y.push(obj[key])
-    // })  
-    // y.sort((a,b)=>b-a)
-    // Object.keys(obj).forEach(key =>{   
-    //         if(obj[key] === y[0]){
-    //             console.log(`en cox ${key} ededi isledilib, ${obj[key]} denedi`)
-    //         } 
-    // }) 
-    // console.log(obj);
+    Object.keys(obj).forEach(key =>{  
+       y.push(obj[key])
+    })  
+    y.sort((a,b)=>b-a)
+    Object.keys(obj).forEach(key =>{   
+            if(obj[key] === y[0]){
+                console.log(`en cox ${key} ededi isledilib, ${obj[key]} denedi`)
+            } 
+    }) 
+    console.log(obj);
 }
-// findDublicate("1 4 5 5 4 5 5 5 5 6 7 8 3 2 2 2 2 2 2 2 2 2 2 4 3 2 1 4 1 1 1");
+findDublicate("1 4 5 5 4 5 5 5 5 6 7 8 3 2 2 2 2 2 2 2 2 2 2 4 3 2 1 4 1 1 1");
 
 
 
@@ -150,3 +156,6 @@ function armstrong(num1, num2){
 
 }
 armstrong(1,2000)
+
+
+

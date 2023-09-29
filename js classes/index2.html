@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ad ve Soyad</title>
+    <style>
+      li{
+        list-style: none;
+        background-color: cyan;
+        color: blueviolet;
+        width: 200px;
+        padding: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ad ve Soyadinizi daxil edin</h1>
+
+    <form id="nameForm">
+      <label for="firstName">Ad:</label>
+      <input type="text" id="firstName" required /><br /><br />
+
+      <label for="lastName">Soyad:</label>
+      <input type="text" id="lastName" required /><br /><br />
+
+      <button type="button" onclick="saveName()">Elave Et</button>
+    </form>
+
+    <h2>Daxil edilen Adlar ve Soyadlar</h2>
+    <ul id="nameList"></ul>
+
+    <script>
+      //   const nameForm = document.getElementById("nameForm");
+      //   const firstNameInput = document.getElementById("firstName");
+      //   const lastNameInput = document.getElementById("lastName");
+      //   const nameList = document.getElementById("nameList");
+      const $ = (par) => document.querySelector(par);
+      let nameArray = new Map();
+
+      function saveName() {
+        let firstName = $("#firstName").value;
+        let lastName = $("#lastName").value;
+
+        nameArray.set({ firstName, lastName });
+
+        const listItem = document.createElement("li");
+        listItem.textContent = `${firstName} ${lastName}`;
+        if (firstName && lastName) {
+          $("#nameList").appendChild(listItem);
+        }
+
+        firstName = "";
+        lastName = "";
+        listItem.addEventListener("click", () => {
+          listItem.style.display = "none";
+        });
+      }
+
+      $("#nameForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
